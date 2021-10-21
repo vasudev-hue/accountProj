@@ -1,0 +1,32 @@
+.convusUploadBtn {
+    background-color: #FF7151;
+    float: right;
+    color: #fff;
+}
+.convusUploadBtn i.fa {
+    margin-right: 10px;
+}
+.mat-button {
+    margin-right: 10px;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    line-height: unset !important;
+}
+.mat-button span.mat-ripple {
+    line-height: unset;
+}
+.progressbarWrap {
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.progress0 {
+    width: 0%;
+}
+.progress100 {
+    width: 100%;
+}
+.cdk-overlay-pane {
+    width: 75%;
+}

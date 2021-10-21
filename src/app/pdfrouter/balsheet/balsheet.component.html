@@ -1,0 +1,127 @@
+<div class="col-md-6 col-lg-6 pull-left" style="padding-right: 0px">
+    <div class="addRowWrap">
+        <form [formGroup]= "adduserForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <span>
+                        <input type="date" formControlName="trnsDate" class="form-control" placeholder="Date" style="height: 30px;" />
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <span>
+                        <select class="form-control" formControlName="transType" >
+                            <option [ngValue]="null" disabled selected hidden>Select type... </option>
+                            <option *ngFor="let tType of transDropdownData" [ngValue]="tType.name">{{tType.name}}</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <span>
+                        <input type="text" formControlName="descp" class="form-control" placeholder="Trans. description" />
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <span>
+                        <select class="form-control" formControlName="cate">
+                            <option [ngValue]="null" disabled selected hidden>Select cate... </option>
+                            <option *ngFor="let tCate of trnsCategory" [ngValue]="tCate.name">{{tCate.name}}</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <span>
+                        <input type="text" formControlName="amt" class="form-control" placeholder="Amount" />
+                    </span>
+                </div>
+            </div>
+        </form>        
+        
+        <button class="btn convusBtn pull-right convusMarButm10" (click)="openAddRowDialog()"><i class="fa fa-plus-circle convusMrgRt10"></i>Add</button>
+        <!-- <button class="btn convusBtn pull-right convusMarButm10" (click)="openAddRowDialog()"><i class="fa fa-plus-circle convusMrgRt10"></i>Add</button> -->
+    </div>
+    <div class="table-container reviewTbl">
+        <table class="table convusTbl table-bordered table-striped convusBalShetTbl">
+            <thead>
+                <tr>
+                    <th>
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+                    </th>
+                    <th><div title="Transaction Date">Trans Date</div></th>
+                    <th><div title="Transaction Type">Trans Type</div></th>
+                    <th><div title="Transaction Description">Trans Description</div></th>
+                    <th><div title="Transaction Category">Trans Category</div></th>
+                    <th><div title="Transaction Amount">Trans Amount</div></th>
+                    <th><div>Actions</div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let mybalsheet of balasheet, index">
+                    
+                    <td class="text-center">
+                        <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                    </label>
+                    </td>
+                    <td>
+                        <div *ngIf="!mybalsheet.isEdit">{{mybalsheet.trnsDate}}</div>
+                        <div *ngIf="mybalsheet.isEdit"><input type="text" class="form-control" name="name" [(ngModel)]="mybalsheet.trnsDate" /></div>
+                    </td>
+                    <td>
+                        <div *ngIf="!mybalsheet.isEdit">{{mybalsheet.transType}}</div>
+                        <div *ngIf="mybalsheet.isEdit">
+                            <select class="form-control" formControlName="transType" >
+                                <option [ngValue]="null" disabled selected hidden>Select type... </option>
+                                <option *ngFor="let tType of transDropdownData" [ngValue]="tType.name">{{tType.name}}</option>
+                            </select>
+                        </div>                        
+                    </td>
+                    <!-- <td title="[mybalsheet.descp]"> -->
+                        <td title="[mybalsheet.descp]">
+                        <div *ngIf="!mybalsheet.isEdit">{{mybalsheet.descp}}</div>
+                        <div *ngIf="mybalsheet.isEdit"><input type="text" class="form-control" name="name" [(ngModel)]="mybalsheet.descp" /></div>                        
+                    </td>
+                    <td>
+                        <div *ngIf="!mybalsheet.isEdit">{{mybalsheet.cate}}</div>
+                        <div *ngIf="mybalsheet.isEdit">
+                            <select class="form-control" formControlName="cate">
+                                <option [ngValue]="null" disabled selected hidden>Select cate... </option>
+                                <option *ngFor="let tCate of trnsCategory" [ngValue]="tCate.name">{{tCate.name}}</option>
+                            </select> 
+                        </div>                           
+                    </td>
+                    <td class="text-right">
+                        <div *ngIf="!mybalsheet.isEdit">{{mybalsheet.amt}}</div>
+                        <div *ngIf="mybalsheet.isEdit"><input type="text" class="form-control" name="name" [(ngModel)]="mybalsheet.amt" /></div>
+                    </td>
+                    <td class="text-center">
+                        <div *ngIf="!mybalsheet.isEdit">
+                            <span class="convusIconSpace convusIconHover" (click)="tablEdit(mybalsheet)"><i class="fa fa-edit"></i></span>
+                            <span class="convusIconHover" (click)="balanceRmovRow(mybalsheet)"><i class="fa fa-trash"></i></span>
+                        </div>
+                        <div *ngIf="mybalsheet.isEdit">
+                            <span class="convusIconSpace convusIconHover" (click)="saveEdit(mybalsheet)"><i class="fa fa fa-save"></i></span>
+                            <span class="convusIconHover" (click)="closeEdit(mybalsheet)"><i class="fa fa-close"></i></span>
+                        </div>
+                        
+                    </td>
+                </tr>             
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-6 pull-left">
+    <app-pdflipdoc></app-pdflipdoc>
+</div>

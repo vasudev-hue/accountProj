@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "convusbank"
+  },
+  "targets": {
+    "convusbank": {
+      "hosting": {
+        "bookkp": [
+          "convusbank"
+        ],
+        "bookkeeping": [
+          "bookkp"
+        ]
+      }
+    }
+  }
+}

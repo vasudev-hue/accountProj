@@ -1,0 +1,79 @@
+<!-- <app-upload-component (uploadedFile)="uploadedFile($event)"></app-upload-component> -->
+<app-upload-component></app-upload-component>
+<router-outlet>
+<div class="convusTblWrap">  
+    <div class="row">
+        <div class="convusQuickNote">
+            <div class="convusCard">
+                <div class="convusCartBox conUpload">
+                    <i class="fa fa-arrow-circle-down"></i>
+                </div>
+                <div class="convusCardNo"><span>Total Uploaded</span><span class="conUploadNo">921</span></div>
+                <div class="convusCardLine">
+                    <span><i class="fa fa-calendar-check-o"></i>Last 24 Hours</span>
+                </div>
+            </div>
+            <div class="convusCard">
+                <div class="convusCartBox convProc">
+                    <i class="fa fa-clone"></i>
+                </div>
+                <div class="convusCardNo"><span>No. of Doc Processed</span><span class="conProcNo">850</span></div>
+                <div class="convusCardLine">
+                    <span><i class="fa fa-calendar-check-o"></i>Last 24 Hours</span>
+                </div>
+            </div>
+            <div class="convusCard">
+                <div class="convusCartBox conFail">
+                    <i class="fa fa-times-circle"></i>
+                </div>
+                <div class="convusCardNo"><span>No. of Doc Failed</span><span class="conFailNo">0</span></div>
+                <div class="convusCardLine">
+                    <span><i class="fa fa-calendar-check-o"></i>Last 24 Hours</span>
+                </div>
+            </div>
+            <div class="convusCard">
+                <div class="convusCartBox conAvgTime">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+                <div class="convusCardNo"><span>Average Processing Time</span><span class="conAvgTimeNo">195.04 s</span></div>
+                <div class="convusCardLine">
+                    <span><i class="fa fa-calendar-check-o"></i>Last 24 Hours</span>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div class="container-fluid convusTableWrap">  
+        <div class="convusTblHeader"><h6>Work Quoue</h6></div>      
+        <div class="convDashTblWrap">
+            <table class="table convusTbl table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th class="text-center">Type</th>
+                        <th class="text-center">Acc.No</th>
+                        <th class="text-center">Date Rec.</th>
+                        <th class="text-center">Date Processed</th>
+                        <th class="text-center">QA Status</th>
+                        <th class="text-center">Last Modified Date</th>
+                        <th class="text-center">Book Keeping Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let myworkq of workqTabl">
+                        <td>{{myworkq.name}}</td>
+                        <td class="text-center">{{myworkq.type}}</td>
+                        <td class="text-center">{{myworkq.accno}}</td>
+                        <td class="text-center">{{myworkq.dateRec}}</td>
+                        <td class="text-center">{{myworkq.dateproc}}</td>
+                        <td class="text-center">{{myworkq.qastatus}}</td>
+                        <td class="text-center">{{myworkq.lastmodidate}}</td>
+                        <td class="text-center"><a class="convusIcon" (click)="showBalanCompo()"><i class="fa fa-eye"></i></a> <a href="#" class="convusIcon"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    
+</router-outlet>

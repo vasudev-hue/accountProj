@@ -1,0 +1,37 @@
+.convusBalDetailWrap {
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    float: left;
+    margin-top: 48px;
+}
+.convusBtnAlign {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.convusBtnAlign button {
+    margin-left: 10px;
+}
+label.convusLabel span:first-child {
+    font-weight: 600;
+}
+.convusLabelWrap {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    vertical-align: middle;
+}
+.convusSepartLine {
+    width: 0.5px;
+    height: 20px;
+    background-color: #dcdcdc;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.convusLabel span:last-child {
+    color: #a0a0a0;
+    margin-left: 10px;
+}

@@ -1,0 +1,9 @@
+.mat-button {
+    margin-right: 10px;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    line-height: unset !important;
+}
+.addRowPopup .form-group {
+    margin-bottom: 0px;
+}

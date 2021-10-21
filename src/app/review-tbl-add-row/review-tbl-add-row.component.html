@@ -1,0 +1,60 @@
+<div class="card">
+    <form [formGroup]="userGroup">
+        <div class="addRowPopup">
+            <div class="form-row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Transaction Description</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="">
+                            <input type="text" formControlName="descp" class="form-control" placeholder="Trans. description" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Transaction Amount</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="">
+                            <input type="text" formControlName="amt" class="form-control" placeholder="Amount" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Transaction Category</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="">
+                            <select class="form-control">
+                                <option>Select...</option>
+                            </select>
+                            <!-- <input type="text" formControlName="cate" class="form-control" placeholder="Trans. category" /> -->
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Transaction Type</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="">
+                            <select class="form-control">
+                                <option>Select...</option>
+                            </select>
+                            <!-- <input type="text" formControlName="transType" class="form-control" placeholder="Trans. Type" /> -->
+                        </div>
+                    </div>
+                </div>
+               <!--  <div class="form-row">
+                    <button class="btn btn-default" (click)="reset()">Reset</button>
+                    <button class="btn btn-default">Cancel</button>
+                    <button class="btn convusBtn" (click)="reviewDataSave()"><i class="fa fa-plus"></i>Save</button>
+                </div> -->
+                
+            </div>
+        </div>
+    </form>
+</div>

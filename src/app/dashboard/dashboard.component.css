@@ -1,0 +1,123 @@
+.convusTblWrap {
+    /* display: flex; */
+    /* margin-right: -15px; */
+    /* margin-left: -15px; */
+    width: 100%;
+    float: left;
+    margin-bottom: 1.96%;
+}
+.convusTableWrap {
+    padding: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.convusTableWrap div:nth-child(2) {
+    background-color: #fff;
+}
+.convusTblHeader {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 3px 3px 0px 0px;
+    border-left: 5px solid #ff7151;
+}
+.convusTblHeader h6 {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+.convusTbl thead th {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.convusTblWrap div.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.convusQuickNote {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+}
+.convusCard {
+    background: #fff;
+    border-radius: 3px;
+    padding: 0px 10px;
+    height: 80px;
+    box-shadow: 4px 5px 3px -1px #e6e6e6;
+}
+.convusCartBox {
+    display: none;
+    /* display: inline-flex; */
+    width: 18%;
+    border-radius: 2px;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    top: -12px;
+    font-size: 20px;
+    box-shadow: 2px 2px 4px 1px #f1f1f1;
+}
+.conUpload{background-color: #f7c55c;}
+.convProc {background-color: #7aa9d2;}
+.conFail{background-color: #ff8c8c;}
+.conAvgTime{background-color: #bc9be2;}
+.conUploadNo {color: #ffad00}
+.conProcNo {color: #3b77ab}
+.conFailNo {color: #e74343}
+.conAvgTimeNo {color: #bc9be2}
+.convusCardLine {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    border-top: 1px solid #dcdcdc;
+    color: #bfbfbf;
+}
+.convusCardNo {
+    display: inline-flex;
+   /* width: 80%; */
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    bottom: 4px;
+    align-items: center;    
+}
+.convusCardNo span:first-child {
+    text-align: left;
+    font-weight: 600;
+   /* padding-left: 10px; */
+}
+.convusCardNo span:last-child {
+    font-size: 28px;
+}
+.convusCardLine span i.fa {
+    padding-right: 10px;
+}
+.convusIcon:hover {
+    background-color: #FF7151;
+    border-radius: 3px;
+    color: #fff !important;
+}
+.convusIcon {
+    color: #dcdcdc;
+    padding: 4px 8px;
+    color: #6b7280;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #bdbdbd0d;
+}
+.convDashTblWrap {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.convDashTblWrap table {
+    margin-bottom: 0px;
+}
